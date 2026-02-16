@@ -1,0 +1,48 @@
+<div class="signup-wrapper">
+    <div class="card p-4 shadow">
+      <h3 class="text-center mb-3">Register Account</h3>
+  
+      <form #signupForm="ngForm" (ngSubmit)="signup()">
+        <div class="mb-3">
+          <label>Email</label>
+          <input type="email" class="form-control" [(ngModel)]="email" name="email" #emailField="ngModel" required placeholder="Enter Email">
+          <small class="text-danger" *ngIf="emailField.invalid && emailField.touched">
+            Email is required
+          </small>
+        </div>
+
+        <div class="mb-3">
+          <label>Phone Number</label>
+          <input type="text" class="form-control" [(ngModel)]="phone" name="phone" #phoneField="ngModel" required placeholder="Enter Phone Number">
+          <small class="text-danger" *ngIf="phoneField.invalid && phoneField.touched">
+            Phone number is required
+          </small>
+        </div>
+  
+        <div class="mb-3">
+          <label>Password</label>
+          <input type="password" class="form-control" [(ngModel)]="password" name="password" #passwordField="ngModel" required placeholder="Password">
+          <small class="text-danger" *ngIf="passwordField.invalid && passwordField.touched">
+            Password is required
+          </small>
+        </div>
+  
+        <div class="mb-3">
+          <label>Confirm Password</label>
+          <input type="password" class="form-control" [(ngModel)]="confirmPassword" name="confirmPassword" #confirmPasswordField="ngModel" required placeholder="Confirm Password">
+          <small class="text-danger" *ngIf="confirmPasswordField.invalid && confirmPasswordField.touched">
+            Confirm password is required
+          </small>
+        </div>
+  
+        <button class="btn btn-success w-100" type="submit">
+          Sign Up
+        </button>
+      </form>
+  
+      <div class="text-center mt-3 small">
+        Already have an account ?
+        <a routerLink="/login">Login</a>
+      </div>
+    </div>
+  </div>

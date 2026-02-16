@@ -6,9 +6,54 @@
     background-color: #f8f9fa;  
   }
   
-  .card {
+.card {
     width: 100%;
-    max-width: 420px;           
-    border-radius: 12px;
-  }
+    max-width: 26.25rem;           
+    border-radius: 1.5rem;
+}
+
+.extra-actions {
+  display: flex;
+  justify-content: center;   /* center items */
+  align-items: center;
+  gap: 20px;                 /* control spacing here */
+  font-size: 13px;
+}
+
+
+.forgot-link {
+  cursor: pointer;
+  text-decoration: none;
+  color: #0d6efd;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.signup-btn {
+  font-size: 13px;
+  padding: 0;
+}
+
+.password-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-field i {
+  position: absolute;
+  right: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  color: #6c757d;
+}
+
+.password-field i:hover {
+  color: #000;
+}
+
+
+
   

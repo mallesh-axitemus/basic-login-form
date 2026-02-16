@@ -1,0 +1,14 @@
+.signup-wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+  }
+  
+  .card {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+  }
+  

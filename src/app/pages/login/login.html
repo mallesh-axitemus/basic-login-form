@@ -2,18 +2,44 @@
   <div class="card p-4 shadow">
     <h3 class="text-center mb-3">Login</h3>
 
-    <form (ngSubmit)="login()">
+    <form #loginForm="ngForm" (ngSubmit)="login()">
       <div class="mb-3">
-        <label>Email</label>
-        <input type="email" class="form-control" [(ngModel)]="email" name="email" required>
+        <label>Email or Phone Number</label>
+        <input type="email" class="form-control" [(ngModel)]="email" name="email" #emailField="ngModel" required>
+        <small class="text-danger" *ngIf="emailField.invalid && emailField.touched">
+          Email is required
+        </small>
       </div>
 
       <div class="mb-3">
         <label>Password</label>
-        <input type="password" class="form-control" [(ngModel)]="password" name="password" required>
+
+        <div class="password-field">
+          <input [type]="showPassword ? 'text' : 'password'" class="form-control" [(ngModel)]="password" name="password"
+            #passwordField="ngModel" required placeholder="Enter Password">
+
+          <i class="bi" [ngClass]="showPassword ? 'bi-eye-slash' : 'bi-eye'" (click)="togglePassword()"></i>
+        </div>
+        <small class="text-danger" *ngIf="passwordField.invalid && passwordField.touched">
+          Password is required
+        </small>
       </div>
-      
-      <button class="btn btn-primary w-100">Login</button>
+
+
+      <button class="btn btn-primary w-100" type="submit">Login</button>
     </form>
+
+    <div class="extra-actions mt-3">
+
+      <a class="forgot-link" routerLink="/forgot-password">
+        Forgot Password?
+      </a>
+
+      <button class="btn btn-link signup-btn" routerLink="/signup">
+        Sign Up
+      </button>
+
+    </div>
+
   </div>
 </div>
