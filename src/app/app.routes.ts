@@ -4,6 +4,7 @@ import { Login } from './pages/login/login';
 import { Dashboard } from './pages/dashboard/dashboard';
 import { Signup } from './pages/signup/signup';
 import { ForgotPassword } from './pages/forgotpassword/forgotpassword';
+import { Button } from './pages/button/button';
 
 export const routes: Routes = [
     {
@@ -25,5 +26,9 @@ export const routes: Routes = [
     {
         path:'forgot-password',
         component:ForgotPassword
+    },
+    {
+        path:'button',
+        component:Button
     }
 ];
