@@ -29,8 +29,7 @@
     color: #FFFFFF;
   }
 
-  &:active,
-  &:focus {
+  &:active, &:focus {
     background-color: #185197;
     border: 1px solid #185197;
     box-shadow: 0 0 0 4px #F4EBFF;
@@ -45,8 +44,7 @@
     border-color: transparent;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -110,8 +108,7 @@
     border-color: #185197;
   }
 
-  &:active,
-  &:focus {
+  &:active, &:focus {
     background-color: #F8FCFF;
     color: #185197;
     border: 1px solid #185197;
@@ -127,8 +124,7 @@
     border: 1px solid #185197;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -192,8 +188,7 @@
     border-color: #D0D5DD;
   }
 
-  &:active,
-  &:focus {
+  &:active, &:focus {
     background-color: #FFFFFF;
     color: #344054;
     border: 1px solid #D0D5DD;
@@ -209,8 +204,7 @@
     color: #D0D5DD;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -273,8 +267,7 @@
     color: #185197;
   }
 
-  &:active,
-  &:focus {
+  &:active, &:focus {
     background-color: transparent;
     color: #185197;
     outline: none;
@@ -287,8 +280,7 @@
     color: #D5D7DA;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -351,8 +343,7 @@
     color: #414651;
   }
 
-  &:active,
-  &:focus {
+  &:active, &:focus {
     background-color: transparent;
     color: #535862;
     outline: none;
@@ -364,8 +355,7 @@
     color: #D5D7DA;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -426,8 +416,7 @@
     color: #D5D7DA;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -492,8 +481,7 @@
     color: #D5D7DA;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -556,8 +544,7 @@
     color: #FFFFFF;
   }
 
-  &:active,
-  &:focus {
+  &:active, &:focus {
     background-color: #D92D20;
     border: 1px solid #B42318;
     box-shadow: 0 0 0 4px #FEE4E2;
@@ -572,8 +559,7 @@
     border-color: transparent;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -637,8 +623,7 @@
     border-color: #FEE4E2;
   }
 
-  &:active,
-  &:focus {
+  &:active, &:focus {
     background-color: #FEF3F2;
     color: #B42318;
     border: 1px solid #FEF3F2;
@@ -654,8 +639,7 @@
     border: 1px solid #FFFBFA;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -719,8 +703,7 @@
     border-color: #FDA29B;
   }
 
-  &:active,
-  &:focus {
+  &:active, &:focus {
     background-color: #FFFFFF;
     color: #B42318;
     border: 1px solid #FDA29B;
@@ -736,8 +719,7 @@
     border: 1px solid #FECDCA;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -800,8 +782,7 @@
     color: #B42318;
   }
 
-  &:active,
-  &:focus {
+  &:active, &:focus {
     background-color: transparent;
     color: #B42318;
     outline: none;
@@ -814,8 +795,7 @@
     color: #FDA29B;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -878,8 +858,7 @@
     color: #912018;
   }
 
-  &:active,
-  &:focus {
+  &:active, &:focus {
     background-color: transparent;
     color: #B42318;
     outline: none;
@@ -891,8 +870,7 @@
     color: #FDA29B;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -957,8 +935,7 @@
     color: #FDA29B;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -1023,8 +1000,7 @@
     color: #FDA29B;
   }
 
-  &.icon-before,
-  &.icon-after {
+  &.icon-before, &.icon-after {
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -1069,6 +1045,18 @@
   padding: 16px 28px;
   font-size: 18px;
   line-height: 28px;
+}
+
+/* Remove padding for link buttons in XL and 2XL */
+.btn-link-primary.btn-xl,
+.btn-link-primary.btn-2xl,
+.btn-link-gray.btn-xl,
+.btn-link-gray.btn-2xl,
+.btn-link-danger-primary.btn-xl,
+.btn-link-danger-primary.btn-2xl,
+.btn-link-danger-gray.btn-xl,
+.btn-link-danger-gray.btn-2xl {
+  padding: 0;
 }
 
 /* 2XL ICON SIZE ADJUSTMENTS */
