@@ -1,35 +1,86 @@
-/* BASE BUTTON STYLES WITH SIZE VARIANTS */
+/* SHARED BASE STYLES */
+[class*="btn-"] {
+  font-family: 'Inter', sans-serif;
+  border-radius: 8px;
+  line-height: 20px;
+  cursor: pointer;
+}
 
+/* SIZE VARIANTS */
+.btn-sm {
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+.btn-md {
+  padding: 10px 16px;
+  font-size: 14px;
+}
+
+.btn-lg {
+  padding: 10px 18px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.btn-xl {
+  padding: 12px 20px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.btn-2xl {
+  padding: 16px 28px;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+/* ICON STYLES */
+.icon-before,
+.icon-after {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-before.circle::before,
+.icon-after.circle::after {
+  content: '';
+  width: 16.67px;
+  height: 16.67px;
+  border: 1.67px solid;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.icon-before.dot::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.btn-2xl.icon-before.circle::before,
+.btn-2xl.icon-after.circle::after {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+}
+
+/* PRIMARY VARIANT */
 .btn-primary {
   background-color: #185197;
   color: #FFFFFF;
-  border-radius: 8px;
   border: 1px solid #185197;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
-
-  &.btn-sm {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    padding: 10px 18px;
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:hover {
     background-color: #185197;
     color: #FFFFFF;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     background-color: #185197;
     border: 1px solid #185197;
     box-shadow: 0 0 0 4px #F4EBFF;
@@ -44,63 +95,21 @@
     border-color: transparent;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #FFFFFF;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #FFFFFF;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #FFFFFF;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #FFFFFF;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
+/* SECONDARY VARIANT */
 .btn-secondary {
   background-color: #F8FCFF;
   color: #185197;
-  border-radius: 8px;
   border: 1px solid #185197;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
-
-  &.btn-sm {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    padding: 10px 18px;
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:hover {
     background-color: #F8FCFF;
@@ -108,7 +117,8 @@
     border-color: #185197;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     background-color: #F8FCFF;
     color: #185197;
     border: 1px solid #185197;
@@ -124,63 +134,21 @@
     border: 1px solid #185197;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #185197;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #185197;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #185197;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #12B76A;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
+/* SECONDARY GRAY VARIANT */
 .btn-secondary-gray {
   background-color: #FFFFFF;
   color: #414651;
-  border-radius: 8px;
   border: 1px solid #D5D7DA;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
-
-  &.btn-sm {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    padding: 10px 18px;
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:hover {
     background-color: #FAFAFA;
@@ -188,7 +156,8 @@
     border-color: #D0D5DD;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     background-color: #FFFFFF;
     color: #344054;
     border: 1px solid #D0D5DD;
@@ -204,70 +173,29 @@
     color: #D0D5DD;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #414651;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #414651;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #414651;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #12B76A;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
+/* TERTIARY VARIANT */
 .btn-tertiary {
   color: #185197;
   background-color: transparent;
-  border-radius: 8px;
   border: none;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
-
-  &.btn-sm {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    padding: 10px 18px;
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:hover {
     background-color: #DFF3FF;
     color: #185197;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     background-color: transparent;
     color: #185197;
     outline: none;
@@ -280,70 +208,29 @@
     color: #D5D7DA;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #185197;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #185197;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #185197;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #12B76A;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
+/* TERTIARY GRAY VARIANT */
 .btn-tertiary-gray {
   background-color: transparent;
   color: #535862;
-  border-radius: 8px;
   border: none;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
-
-  &.btn-sm {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    padding: 10px 18px;
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:hover {
     background-color: #FAFAFA;
     color: #414651;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     background-color: transparent;
     color: #535862;
     outline: none;
@@ -355,122 +242,46 @@
     color: #D5D7DA;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #535862;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #535862;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #535862;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #12B76A;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
+/* LINK PRIMARY VARIANT */
 .btn-link-primary {
   background-color: transparent;
   color: #185197;
   border: none;
   padding: 0;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
   text-decoration: none;
-
-  &.btn-sm {
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:disabled {
     cursor: not-allowed;
     color: #D5D7DA;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #185197;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #185197;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #185197;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #12B76A;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
+/* LINK GRAY VARIANT */
 .btn-link-gray {
   background-color: transparent;
   color: #535862;
   border: none;
   padding: 0;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
   text-decoration: none;
-
-  &.btn-sm {
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:hover {
     color: #414651;
@@ -481,70 +292,29 @@
     color: #D5D7DA;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #535862;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #535862;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #535862;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #12B76A;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
+/* PRIMARY DANGER VARIANT */
 .btn-primary-danger {
   background-color: #D92D20;
   color: #FFFFFF;
-  border-radius: 8px;
   border: 1px solid #B42318;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
-
-  &.btn-sm {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    padding: 10px 18px;
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:hover {
     background-color: #B42318;
     color: #FFFFFF;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     background-color: #D92D20;
     border: 1px solid #B42318;
     box-shadow: 0 0 0 4px #FEE4E2;
@@ -559,63 +329,21 @@
     border-color: transparent;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #FFFFFF;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #FFFFFF;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #FFFFFF;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #FFFFFF;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
+/* SECONDARY DANGER VARIANT */
 .btn-secondary-danger {
   background-color: #FEF3F2;
   color: #B42318;
-  border-radius: 8px;
   border: 1px solid #FEF3F2;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
-
-  &.btn-sm {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    padding: 10px 18px;
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:hover {
     background-color: #FEE4E2;
@@ -623,7 +351,8 @@
     border-color: #FEE4E2;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     background-color: #FEF3F2;
     color: #B42318;
     border: 1px solid #FEF3F2;
@@ -639,63 +368,21 @@
     border: 1px solid #FFFBFA;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #B42318;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #B42318;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #B42318;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #12B76A;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
+/* SECONDARY DANGER GRAY VARIANT */
 .btn-secondary-danger-gray {
   background-color: #FFFFFF;
   color: #B42318;
-  border-radius: 8px;
   border: 1px solid #FDA29B;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
-
-  &.btn-sm {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    padding: 10px 18px;
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:hover {
     background-color: #FEF3F2;
@@ -703,7 +390,8 @@
     border-color: #FDA29B;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     background-color: #FFFFFF;
     color: #B42318;
     border: 1px solid #FDA29B;
@@ -719,70 +407,29 @@
     border: 1px solid #FECDCA;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #B42318;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #B42318;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #B42318;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #12B76A;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
+/* TERTIARY DANGER VARIANT */
 .btn-tertiary-danger {
   color: #B42318;
   background-color: transparent;
-  border-radius: 8px;
   border: none;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
-
-  &.btn-sm {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    padding: 10px 18px;
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:hover {
     background-color: #FEF3F2;
     color: #B42318;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     background-color: transparent;
     color: #B42318;
     outline: none;
@@ -795,70 +442,29 @@
     color: #FDA29B;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #B42318;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #B42318;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #B42318;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #12B76A;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
+/* TERTIARY DANGER GRAY VARIANT */
 .btn-tertiary-danger-gray {
   background-color: transparent;
   color: #B42318;
-  border-radius: 8px;
   border: none;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
-
-  &.btn-sm {
-    padding: 8px 14px;
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    padding: 10px 16px;
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    padding: 10px 18px;
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:hover {
     background-color: #FEF3F2;
     color: #912018;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     background-color: transparent;
     color: #B42318;
     outline: none;
@@ -870,61 +476,23 @@
     color: #FDA29B;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #B42318;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #B42318;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #B42318;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #12B76A;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
+/* LINK DANGER PRIMARY VARIANT */
 .btn-link-danger-primary {
   background-color: transparent;
   color: #B42318;
   border: none;
   padding: 0;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
   text-decoration: none;
-
-  &.btn-sm {
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:hover {
     color: #912018;
@@ -935,61 +503,23 @@
     color: #FDA29B;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #B42318;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #B42318;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #B42318;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #12B76A;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
+/* LINK DANGER GRAY VARIANT */
 .btn-link-danger-gray {
   background-color: transparent;
   color: #B42318;
   border: none;
   padding: 0;
-  font-family: 'Inter', sans-serif;
-  line-height: 20px;
   text-decoration: none;
-
-  &.btn-sm {
-    font-size: 14px;
-  }
-
-  &.btn-md {
-    font-size: 14px;
-  }
-
-  &.btn-lg {
-    font-size: 16px;
-    line-height: 24px;
-  }
 
   &:hover {
     color: #912018;
@@ -1000,69 +530,106 @@
     color: #FDA29B;
   }
 
-  &.icon-before, &.icon-after {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  &.icon-before.circle::before {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #B42318;
-    border-radius: 50%;
-    display: inline-block;
-  }
-
+  &.icon-before.circle::before,
   &.icon-after.circle::after {
-    content: '';
-    width: 16.67px;
-    height: 16.67px;
-    border: 1.67px solid #B42318;
-    border-radius: 50%;
-    display: inline-block;
+    border-color: #B42318;
   }
 
   &.icon-before.dot::before {
-    content: '';
-    width: 8px;
-    height: 8px;
     background-color: #12B76A;
-    border-radius: 50%;
-    display: inline-block;
   }
 }
 
-/* XL and 2XL SIZE MODIFIERS */
-.btn-xl {
-  padding: 12px 20px;
-  font-size: 16px;
-  line-height: 24px;
+/* LINK BUTTON SIZE OVERRIDES */
+.btn-link-primary,
+.btn-link-gray,
+.btn-link-danger-primary,
+.btn-link-danger-gray {
+
+  &.btn-xl,
+  &.btn-2xl {
+    padding: 0;
+  }
 }
 
-.btn-2xl {
-  padding: 16px 28px;
-  font-size: 18px;
-  line-height: 28px;
+/* ICON-ONLY SQUARE BUTTONS */
+.btn-primary.icon-only,
+.btn-secondary.icon-only,
+.btn-secondary-gray.icon-only,
+.btn-tertiary.icon-only,
+.btn-tertiary-gray.icon-only,
+.btn-primary-danger.icon-only,
+.btn-secondary-danger.icon-only,
+.btn-secondary-danger-gray.icon-only,
+.btn-tertiary-danger.icon-only,
+.btn-tertiary-danger-gray.icon-only {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+
+  &.btn-sm {
+    width: 36px;
+    height: 36px;
+  }
+
+  &.btn-md {
+    width: 40px;
+    height: 40px;
+  }
+
+  &.btn-lg {
+    width: 44px;
+    height: 44px;
+  }
+
+  &.btn-xl {
+    width: 48px;
+    height: 48px;
+  }
+
+  &.btn-2xl {
+    width: 56px;
+    height: 56px;
+  }
+
+  &.circle::before {
+    content: '';
+    width: 16.6px;
+    height: 16.6px;
+    border: 2px solid;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  &.btn-2xl.circle::before {
+    width: 20px;
+    height: 20px;
+  }
 }
 
-/* Remove padding for link buttons in XL and 2XL */
-.btn-link-primary.btn-xl,
-.btn-link-primary.btn-2xl,
-.btn-link-gray.btn-xl,
-.btn-link-gray.btn-2xl,
-.btn-link-danger-primary.btn-xl,
-.btn-link-danger-primary.btn-2xl,
-.btn-link-danger-gray.btn-xl,
-.btn-link-danger-gray.btn-2xl {
-  padding: 0;
+/* ICON-ONLY BORDER COLORS */
+.btn-primary.icon-only.circle::before,
+.btn-primary-danger.icon-only.circle::before {
+  border-color: #FFFFFF;
 }
 
-/* 2XL ICON SIZE ADJUSTMENTS */
-.btn-2xl.icon-before.circle::before,
-.btn-2xl.icon-after.circle::after {
-  width: 20px;
-  height: 20px;
-  border-width: 2px;
+.btn-secondary.icon-only.circle::before,
+.btn-tertiary.icon-only.circle::before {
+  border-color: #185197;
+}
+
+.btn-secondary-gray.icon-only.circle::before {
+  border-color: #414651;
+}
+
+.btn-tertiary-gray.icon-only.circle::before {
+  border-color: #535862;
+}
+
+.btn-secondary-danger.icon-only.circle::before,
+.btn-secondary-danger-gray.icon-only.circle::before,
+.btn-tertiary-danger.icon-only.circle::before,
+.btn-tertiary-danger-gray.icon-only.circle::before {
+  border-color: #B42318;
 }
