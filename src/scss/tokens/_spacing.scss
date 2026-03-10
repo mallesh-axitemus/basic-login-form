@@ -1,0 +1,35 @@
+// =============================================================================
+// SPACING SYSTEM (Based on 4px grid)
+// =============================================================================
+
+:root {
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;  // 4px
+  --spacing-2: 0.5rem;   // 8px
+  --spacing-3: 0.75rem;  // 12px
+  --spacing-4: 1rem;     // 16px
+  --spacing-5: 1.25rem;  // 20px
+  --spacing-6: 1.5rem;   // 24px
+  --spacing-7: 1.75rem;  // 28px
+
+  // Icon Gap
+  --icon-gap: var(--spacing-2);
+}
+
+$spacing-0: var(--spacing-0);
+$spacing-1: var(--spacing-1);
+$spacing-2: var(--spacing-2);
+$spacing-3: var(--spacing-3);
+$spacing-4: var(--spacing-4);
+$spacing-5: var(--spacing-5);
+$spacing-6: var(--spacing-6);
+$spacing-7: var(--spacing-7);
+
+// Button Specific Spacing
+$btn-padding-sm: $spacing-2 0.875rem;  // 8px 14px
+$btn-padding-md: 0.625rem $spacing-4;  // 10px 16px
+$btn-padding-lg: 0.625rem 1.125rem;    // 10px 18px
+$btn-padding-xl: 0.75rem $spacing-5;   // 12px 20px
+$btn-padding-2xl: $spacing-4 $spacing-7; // 16px 28px
+
+$icon-gap: var(--icon-gap);

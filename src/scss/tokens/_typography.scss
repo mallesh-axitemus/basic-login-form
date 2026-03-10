@@ -1,0 +1,55 @@
+// =============================================================================
+// TYPOGRAPHY SYSTEM
+// =============================================================================
+
+:root {
+  // Font Family
+  --font-family-base: 'Inter', sans-serif;
+
+  // Font Sizes
+  --font-size-sm: 0.875rem;  // 14px
+  --font-size-md: 0.9375rem; // 15px
+  --font-size-base: 1rem;    // 16px
+  --font-size-lg: 1.125rem;  // 18px
+
+  // Line Heights
+  --line-height-tight: 1.25;  // 20px for 16px font
+  --line-height-normal: 1.5;  // 24px for 16px font
+  --line-height-relaxed: 1.75; // 28px for 16px font
+
+  // Button Typography
+  --btn-font-sm: var(--font-size-sm);
+  --btn-font-md: var(--font-size-sm);
+  --btn-font-lg: var(--font-size-base);
+  --btn-font-xl: var(--font-size-base);
+  --btn-font-2xl: var(--font-size-lg);
+
+  --btn-line-height-sm: 1.25rem; // 20px
+  --btn-line-height-md: 1.25rem; // 20px
+  --btn-line-height-lg: 1.5rem;  // 24px
+  --btn-line-height-xl: 1.5rem;  // 24px
+  --btn-line-height-2xl: 1.75rem; // 28px
+}
+
+$font-family-base: var(--font-family-base);
+
+$font-size-sm: var(--font-size-sm);
+$font-size-md: var(--font-size-md);
+$font-size-base: var(--font-size-base);
+$font-size-lg: var(--font-size-lg);
+
+$line-height-tight: var(--line-height-tight);
+$line-height-normal: var(--line-height-normal);
+$line-height-relaxed: var(--line-height-relaxed);
+
+$btn-font-sm: var(--btn-font-sm);
+$btn-font-md: var(--btn-font-md);
+$btn-font-lg: var(--btn-font-lg);
+$btn-font-xl: var(--btn-font-xl);
+$btn-font-2xl: var(--btn-font-2xl);
+
+$btn-line-height-sm: var(--btn-line-height-sm);
+$btn-line-height-md: var(--btn-line-height-md);
+$btn-line-height-lg: var(--btn-line-height-lg);
+$btn-line-height-xl: var(--btn-line-height-xl);
+$btn-line-height-2xl: var(--btn-line-height-2xl);

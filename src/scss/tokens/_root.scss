@@ -1,0 +1,112 @@
+// =============================================================================
+// ROOT CSS CUSTOM PROPERTIES - All Design Tokens
+// =============================================================================
+
+:root {
+  // ===== COLOR SYSTEM =====
+  
+  // Primary Colors
+  --color-primary-50: #F8FCFF;
+  --color-primary-100: #E6F2FF;
+  --color-primary-200: #DFF3FF;
+  --color-primary-600: #185197;
+  --color-primary-700: #69C1F7;
+
+  // Gray Colors
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F9FAFB;
+  --color-gray-200: #F2F4F7;
+  --color-gray-300: #D0D5DD;
+  --color-gray-400: #D5D7DA;
+  --color-gray-500: #535862;
+  --color-gray-600: #414651;
+  --color-gray-700: #344054;
+
+  // Danger/Error Colors
+  --color-danger-50: #FFFBFA;
+  --color-danger-100: #FEF3F2;
+  --color-danger-200: #FEE4E2;
+  --color-danger-300: #FECDCA;
+  --color-danger-400: #FDA29B;
+  --color-danger-600: #D92D20;
+  --color-danger-700: #B42318;
+  --color-danger-800: #912018;
+
+  // Success Colors
+  --color-success-600: #12B76A;
+
+  // Base Colors
+  --color-white: #FFFFFF;
+  --color-transparent: transparent;
+
+  // Focus/Shadow Colors
+  --color-focus: #2382a0;
+
+  // ===== SPACING SYSTEM =====
+  
+  --spacing-0: 0;
+  --spacing-1: 0.25rem;  // 4px
+  --spacing-2: 0.5rem;   // 8px
+  --spacing-3: 0.75rem;  // 12px
+  --spacing-4: 1rem;     // 16px
+  --spacing-5: 1.25rem;  // 20px
+  --spacing-6: 1.5rem;   // 24px
+  --spacing-7: 1.75rem;  // 28px
+
+  // Icon Gap
+  --icon-gap: var(--spacing-2);
+
+  // ===== BORDER SYSTEM =====
+  
+  // Border Width
+  --border-width-none: 0;
+  --border-width-thin: 1px;
+  --border-width-medium: 2px;
+  --border-width-thick: 4px;
+
+  // Focus Ring
+  --focus-ring-width: 0.125rem;
+  --focus-ring-offset: 0;
+
+  // ===== RADIUS SYSTEM =====
+  
+  --radius-none: 0;
+  --radius-sm: 0.25rem;   // 4px
+  --radius-md: 0.5rem;    // 8px
+  --radius-lg: 0.75rem;   // 12px
+  --radius-xl: 1rem;      // 16px
+  --radius-full: 50%;     // Circle
+  --radius-pill: 999px;   // Pill shape
+
+  // Button Specific
+  --btn-radius: var(--radius-md);
+
+  // ===== TYPOGRAPHY SYSTEM =====
+  
+  // Font Family
+  --font-family-base: 'Inter', sans-serif;
+
+  // Font Sizes
+  --font-size-sm: 0.875rem;  // 14px
+  --font-size-md: 0.9375rem; // 15px
+  --font-size-base: 1rem;    // 16px
+  --font-size-lg: 1.125rem;  // 18px
+
+  // Line Heights
+  --line-height-tight: 1.25;  // 20px for 16px font
+  --line-height-normal: 1.5;  // 24px for 16px font
+  --line-height-relaxed: 1.75; // 28px for 16px font
+
+  // Button Typography
+  --btn-font-sm: var(--font-size-sm);
+  --btn-font-md: var(--font-size-sm);
+  --btn-font-lg: var(--font-size-base);
+  --btn-font-xl: var(--font-size-base);
+  --btn-font-2xl: var(--font-size-lg);
+
+  --btn-line-height-sm: 1.25rem; // 20px
+  --btn-line-height-md: 1.25rem; // 20px
+  --btn-line-height-lg: 1.5rem;  // 24px
+  --btn-line-height-xl: 1.5rem;  // 24px
+  --btn-line-height-2xl: 1.75rem; // 28px
+}

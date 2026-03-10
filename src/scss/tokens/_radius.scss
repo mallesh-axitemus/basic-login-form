@@ -1,0 +1,26 @@
+// =============================================================================
+// RADIUS SYSTEM
+// =============================================================================
+
+:root {
+  --radius-none: 0;
+  --radius-sm: 0.25rem;   // 4px
+  --radius-md: 0.5rem;    // 8px
+  --radius-lg: 0.75rem;   // 12px
+  --radius-xl: 1rem;      // 16px
+  --radius-full: 50%;     // Circle
+  --radius-pill: 999px;   // Pill shape
+
+  // Button Specific
+  --btn-radius: var(--radius-md);
+}
+
+$radius-none: var(--radius-none);
+$radius-sm: var(--radius-sm);
+$radius-md: var(--radius-md);
+$radius-lg: var(--radius-lg);
+$radius-xl: var(--radius-xl);
+$radius-full: var(--radius-full);
+$radius-pill: var(--radius-pill);
+
+$btn-radius: var(--btn-radius);

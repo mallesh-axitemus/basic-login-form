@@ -5,6 +5,10 @@ import { Dashboard } from './pages/dashboard/dashboard';
 import { Signup } from './pages/signup/signup';
 import { ForgotPassword } from './pages/forgotpassword/forgotpassword';
 import { Button } from './pages/button/button';
+import { Inputfield } from './pages/inputfield/inputfield';
+import { Textareacomponent } from './pages/textareacomponent/textareacomponent';
+import { Verificationcode } from './pages/verificationcode/verificationcode';
+import { Modals } from './pages/modals/modals';
 
 export const routes: Routes = [
     {
@@ -30,5 +34,21 @@ export const routes: Routes = [
     {
         path:'button',
         component:Button
+    },
+    {
+        path:'input-field',
+        component:Inputfield
+    },
+    {
+        path:'textarea',
+        component:Textareacomponent
+    },
+    {
+        path:'verification',
+        component:Verificationcode
+    },
+    {
+        path:'modals',
+        component:Modals
     }
 ];
