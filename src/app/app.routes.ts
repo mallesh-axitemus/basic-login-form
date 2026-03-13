@@ -9,6 +9,7 @@ import { Inputfield } from './pages/inputfield/inputfield';
 import { Textareacomponent } from './pages/textareacomponent/textareacomponent';
 import { Verificationcode } from './pages/verificationcode/verificationcode';
 import { Modals } from './pages/modals/modals';
+import { Inputdropdownmenu } from './pages/inputdropdownmenu/inputdropdownmenu';
 
 export const routes: Routes = [
     {
@@ -50,5 +51,9 @@ export const routes: Routes = [
     {
         path:'modals',
         component:Modals
+    },
+    {
+        path:'input-dropdown-menu',
+        component:Inputdropdownmenu
     }
 ];

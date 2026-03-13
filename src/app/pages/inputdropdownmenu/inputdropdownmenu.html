@@ -1,0 +1,28 @@
+<div class="dropdown-menus-wrapper">
+  @for (iconType of iconTypes; track iconType) {
+    <div class="input-dropdown-menu" [class]="'input-dropdown-menu--' + iconType">
+      @for (option of options; track $index) {
+        <button
+          type="button"
+          class="dropdown-menu-item"
+          [class.check-true]="selectedIndexByType[iconType] === $index"
+          (click)="selectOption(iconType, $index)"
+        >
+          <span
+            class="dropdown-menu-item-icon"
+            [class.dropdown-menu-item-icon--user]="iconType === 'user'"
+            [class.dropdown-menu-item-icon--dot]="iconType === 'dot'"
+            [class.dropdown-menu-item-icon--hidden]="iconType === 'default'"
+          ></span>
+          <span class="dropdown-menu-item-label">
+            {{ option.label }}
+            @if (option.suffix) {
+              <span class="dropdown-menu-item-suffix">{{ option.suffix }}</span>
+            }
+          </span>
+          <span class="dropdown-menu-item-check"></span>
+        </button>
+      }
+    </div>
+  }
+</div>

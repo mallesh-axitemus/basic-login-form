@@ -1,13 +1,71 @@
 <div class="modal-overlay">
   <div class="modal-box">
     <div class="modal-content">
-      <div class="success-icon"></div>
-      <h2 class="modal-title">Blog post published</h2>
-      <p class="modal-description">This blog post has been published. Team members will be able to edit this post and republish changes.</p>
+      <div class="payment-icon"></div>
+      <h2 class="modal-title">Change your payment method</h2>
+      <p class="modal-description">Update your plan payment details.</p>
+
+      <div class="payment-card-list">
+
+        <!-- Visa – selected -->
+        <div class="payment-card selected">
+          <div class="payment-card-top">
+            <div class="payment-card-left">
+              <div class="payment-logo visa"></div>
+              <div class="payment-card-info">
+                <div class="payment-card-name">Visa ending in 1234</div>
+                <div class="payment-card-expiry">Expiry 06/2024</div>
+              </div>
+            </div>
+            <div class="radio-button checked"></div>
+          </div>
+          <div class="payment-card-actions">
+            <span class="payment-action-link">Set as default</span>
+            <span class="payment-action-link">Edit</span>
+          </div>
+        </div>
+
+        <!-- Mastercard -->
+        <div class="payment-card">
+          <div class="payment-card-top">
+            <div class="payment-card-left">
+              <div class="payment-logo mastercard"></div>
+              <div class="payment-card-info">
+                <div class="payment-card-name">Mastercard ending in 1234</div>
+                <div class="payment-card-expiry">Expiry 06/2024</div>
+              </div>
+            </div>
+            <div class="radio-button"></div>
+          </div>
+          <div class="payment-card-actions">
+            <span class="payment-action-link">Set as default</span>
+            <span class="payment-action-link">Edit</span>
+          </div>
+        </div>
+
+        <!-- Apple Pay -->
+        <div class="payment-card">
+          <div class="payment-card-top">
+            <div class="payment-card-left">
+              <div class="payment-logo applepay"></div>
+              <div class="payment-card-info">
+                <div class="payment-card-name">Visa ending in 1234</div>
+                <div class="payment-card-expiry">Expiry 06/2024</div>
+              </div>
+            </div>
+            <div class="radio-button"></div>
+          </div>
+          <div class="payment-card-actions">
+            <span class="payment-action-link">Set as default</span>
+            <span class="payment-action-link">Edit</span>
+          </div>
+        </div>
+
+      </div>
     </div>
     <div class="modal-buttons">
       <button class="btn-cancel">Cancel</button>
-      <button class="btn-confirm">Confirm</button>
+      <button class="btn-confirm-plan">Confirm</button>
     </div>
   </div>
 </div>
