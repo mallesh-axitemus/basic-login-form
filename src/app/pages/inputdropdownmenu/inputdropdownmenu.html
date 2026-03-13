@@ -1,27 +1,92 @@
-<div class="dropdown-menus-wrapper">
+<div class="dropdown-menus-wrapper" (keydown.escape)="close()">
   @for (iconType of iconTypes; track iconType) {
-    <div class="input-dropdown-menu" [class]="'input-dropdown-menu--' + iconType">
-      @for (option of options; track $index) {
+    <div class="dropdown-wrapper" [class.dropdown-wrapper--open]="isOpenByType[iconType]">
+      @if (fieldLabel) {
+        <label class="dropdown-label">{{ fieldLabel }}</label>
+      }
+      @if (iconType === 'search') {
+        <div
+          class="dropdown-trigger"
+          [class.dropdown-trigger--focused]="isFocusedByType[iconType]"
+          (click)="onSearchTriggerClick($event)"
+          role="combobox"
+          [attr.aria-expanded]="isOpenByType[iconType]"
+          aria-label="Search"
+        >
+          <span class="dropdown-trigger-icon dropdown-trigger-icon--search"></span>
+          <input
+            type="text"
+            class="dropdown-trigger-input"
+            [value]="getSearchDisplayValue()"
+            (input)="onSearchInput($any($event.target).value)"
+            (focus)="isFocusedByType[iconType] = true; isOpenByType[iconType] = true"
+            (blur)="onTriggerBlur(iconType)"
+            placeholder="Search"
+            aria-autocomplete="list"
+            aria-controls="search-listbox"
+          />
+          <span
+            class="dropdown-trigger-chevron"
+            [class.dropdown-trigger-chevron--open]="isOpenByType[iconType]"
+          ></span>
+        </div>
+      } @else {
         <button
           type="button"
-          class="dropdown-menu-item"
-          [class.check-true]="selectedIndexByType[iconType] === $index"
-          (click)="selectOption(iconType, $index)"
+          class="dropdown-trigger"
+          [class.dropdown-trigger--focused]="isFocusedByType[iconType]"
+          (click)="toggle(iconType)"
+          (focus)="isFocusedByType[iconType] = true"
+          (blur)="onTriggerBlur(iconType)"
+          aria-haspopup="listbox"
+          [attr.aria-expanded]="isOpenByType[iconType]"
+          aria-label="Select team member"
         >
           <span
-            class="dropdown-menu-item-icon"
-            [class.dropdown-menu-item-icon--user]="iconType === 'user'"
-            [class.dropdown-menu-item-icon--dot]="iconType === 'dot'"
-            [class.dropdown-menu-item-icon--hidden]="iconType === 'default'"
+            class="dropdown-trigger-icon"
+            [class.dropdown-trigger-icon--hidden]="iconType === 'default'"
+            [class.dropdown-trigger-icon--user]="iconType === 'user'"
+            [class.dropdown-trigger-icon--dot]="iconType === 'dot'"
           ></span>
-          <span class="dropdown-menu-item-label">
-            {{ option.label }}
-            @if (option.suffix) {
-              <span class="dropdown-menu-item-suffix">{{ option.suffix }}</span>
-            }
+          <span
+            class="dropdown-trigger-text"
+            [class.dropdown-trigger-text--placeholder]="selectedIndexByType[iconType] === null"
+          >
+            {{ selectedIndexByType[iconType] === null ? placeholderByType[iconType] : options[selectedIndexByType[iconType]!].label }}
           </span>
-          <span class="dropdown-menu-item-check"></span>
+          <span
+            class="dropdown-trigger-chevron"
+            [class.dropdown-trigger-chevron--open]="isOpenByType[iconType]"
+          ></span>
         </button>
+      }
+
+      @if (isOpenByType[iconType]) {
+        <div
+          class="dropdown-panel"
+          role="listbox"
+          [attr.id]="iconType === 'search' ? 'search-listbox' : null"
+        >
+          @for (item of getFilteredOptions(iconType); track item.originalIndex) {
+            <button
+              type="button"
+              class="dropdown-menu-item"
+              [class.check-true]="selectedIndexByType[iconType] === item.originalIndex"
+              (click)="selectOption(iconType, item.originalIndex)"
+              role="option"
+              [attr.aria-selected]="selectedIndexByType[iconType] === item.originalIndex"
+            >
+              <span
+                class="dropdown-menu-item-icon"
+                [class.dropdown-menu-item-icon--hidden]="iconType === 'default' || iconType === 'search'"
+                [class.dropdown-menu-item-icon--user]="iconType === 'user'"
+                [class.dropdown-menu-item-icon--dot]="iconType === 'dot'"
+              ></span>
+              <span class="dropdown-menu-item-label">{{ item.option.label }}</span>
+              <span class="dropdown-menu-item-check"></span>
+            </button>
+          }
+        </div>
       }
     </div>
   }

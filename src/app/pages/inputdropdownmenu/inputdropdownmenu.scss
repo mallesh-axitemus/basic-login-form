@@ -8,7 +8,11 @@ $dropdown-assets: '../../../assets/inputdropdownmenu';
   background-position: center;
 }
 
-// Wrapper: three menus side by side (default, user icon, dot icon)
+:host {
+  --AssetsInfoBlueLight: rgba(12, 122, 232, 0.2);
+}
+
+// Four dropdowns: default (no icon), user, dot, search icon
 .dropdown-menus-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -16,27 +20,146 @@ $dropdown-assets: '../../../assets/inputdropdownmenu';
   padding: 1rem;
 }
 
-// Overall box: 320×320
-.input-dropdown-menu {
+// Wrapper: position input field at top 16px, left 368px
+.dropdown-wrapper {
+  position: relative;
   width: 320px;
-  height: 320px;
-  margin: 16px 0 0 16px;
+  top: 16px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+// Optional label above the field (e.g. "Team member")
+.dropdown-label {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #414651;
+  margin: 0;
+  display: block;
+}
+
+// Input field: sizes and spacing only (per spec)
+.dropdown-trigger {
+  width: 320px;
+  height: 44px;
+  padding-top: 10px;
+  padding-right: 14px;
+  padding-bottom: 10px;
+  padding-left: 14px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 8px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #D5D7DA;
+  background: #FFFFFF;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: left;
+  opacity: 1;
+
+  &.dropdown-trigger--focused {
+    border-color: #0C7AE8;
+    box-shadow: 0 0 0 4px var(--AssetsInfoBlueLight);
+    outline: none;
+  }
+}
+
+.dropdown-trigger-icon {
+  @extend %bg-icon;
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+
+  &.dropdown-trigger-icon--hidden {
+    display: none;
+  }
+
+  &.dropdown-trigger-icon--user {
+    background-image: url('#{$dropdown-assets}/user.svg');
+  }
+
+  &.dropdown-trigger-icon--dot {
+    width: 0.635rem;
+    height: 0.635rem;
+    background-image: url('#{$dropdown-assets}/Dot.svg');
+  }
+
+  &.dropdown-trigger-icon--search {
+    background-image: url('#{$dropdown-assets}/search.svg');
+  }
+}
+
+.dropdown-trigger-text {
+  flex: 1;
+  min-width: 0;
+  color: #181D27;
+
+  &.dropdown-trigger-text--placeholder {
+    color: #717680;
+  }
+}
+
+.dropdown-trigger-input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #181D27;
+  padding: 0;
+  outline: none;
+
+  &::placeholder {
+    color: #717680;
+  }
+}
+
+.dropdown-trigger-chevron {
+  @extend %bg-icon;
+  width: 20px;
+  height: 20px;
+  background-image: url('#{$dropdown-assets}/chevron-down.svg');
+  transition: transform 0.2s ease;
+
+  &.dropdown-trigger-chevron--open {
+    transform: rotate(180deg);
+  }
+}
+
+// Panel: options list below trigger, scroll when overflow
+.dropdown-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 320px;
+  max-height: 320px;
   padding: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   gap: 8px;
-  opacity: 1;
   border-radius: 8px;
   border: 1px solid var(--Neutral-24, #ECECEC);
   background: var(--Neutral-00, #FFFFFF);
   box-shadow: 0 4px 6px -2px #0A0D1208, 0 12px 16px -4px #0A0D1214;
-  overflow-y: auto;
+  overflow: auto;
   scrollbar-width: thin;
   scrollbar-color: var(--Neutral-24, #ECECEC) transparent;
   -ms-overflow-style: auto;
+  z-index: 10;
 
-  // Scrollbar: thumb length 50% of track; width 8px, radius 8px, Neutral/24
   &::-webkit-scrollbar {
     width: 16px;
   }
@@ -99,6 +222,10 @@ $dropdown-assets: '../../../assets/inputdropdownmenu';
     width: 0.635rem;
     height: 0.635rem;
     background-image: url('#{$dropdown-assets}/Dot.svg');
+  }
+
+  &.dropdown-menu-item-icon--search {
+    background-image: url('#{$dropdown-assets}/search.svg');
   }
 }
 
