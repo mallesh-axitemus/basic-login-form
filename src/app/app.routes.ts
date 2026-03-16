@@ -10,6 +10,7 @@ import { Textareacomponent } from './pages/textareacomponent/textareacomponent';
 import { Verificationcode } from './pages/verificationcode/verificationcode';
 import { Modals } from './pages/modals/modals';
 import { Inputdropdownmenu } from './pages/inputdropdownmenu/inputdropdownmenu';
+import { Dropdownmenu } from './pages/dropdownmenu/dropdownmenu';
 
 export const routes: Routes = [
     {
@@ -55,5 +56,9 @@ export const routes: Routes = [
     {
         path:'input-dropdown-menu',
         component:Inputdropdownmenu
+    },
+    {
+        path:'dropdown',
+        component:Dropdownmenu
     }
 ];

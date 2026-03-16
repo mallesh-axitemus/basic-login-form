@@ -1,0 +1,19 @@
+<div class="dropdown-container">
+  <div class="dropdown-list">
+    <div class="dropdown-header">
+      <div class="header-name">Olivia Rhye</div>
+      <div class="header-text">
+        <span class="online-dot"></span>
+        olivia&#64;untitledui.com
+      </div>
+    </div>
+    <div class="dropdown-item" *ngFor="let item of items">
+      <div class="item-left">
+        <input class="dropdown-item-checkbox" type="checkbox" [(ngModel)]="item.checked" />
+        <img [src]="item.icon" [alt]="item.label" />
+        <span>{{ item.label }}</span>
+      </div>
+      <span class="shortcut">{{ item.shortcut }}</span>
+    </div>
+  </div>
+</div>
